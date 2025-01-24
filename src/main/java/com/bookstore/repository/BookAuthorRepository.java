@@ -11,5 +11,5 @@ import com.bookstore.model.BookAuthor;
 public interface BookAuthorRepository extends JpaRepository<BookAuthor, Long>{
 	List<BookAuthor> findByAuthorId(Long authorId);
 	List<BookAuthor> findByBookId(Long bookId);
-	
+	void deleteByBookId(Long bookId);
 }

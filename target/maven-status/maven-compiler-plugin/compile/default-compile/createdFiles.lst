@@ -5,6 +5,7 @@ com\bookstore\service\BookService.class
 com\bookstore\exception\BadRequestException.class
 com\bookstore\exception\ErrorResponse.class
 com\bookstore\exception\NotFoundException.class
+com\bookstore\security\SecurityConfig.class
 com\bookstore\controller\BookController.class
 com\bookstore\model\Book.class
 com\bookstore\repository\BookAuthorRepository.class

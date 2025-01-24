@@ -12,9 +12,6 @@ import com.bookstore.model.Book;
 public interface BookRepository extends JpaRepository<Book, Long>{
 	
 	List<Book> findByTitle(@Param("title") String title);
-	Book  findByIsbn(@Param("isbn") String isbn);
 	
-	//@PreAuthorize("hasRole('ROLE_ADMIN')") 
-	@Override
-	void deleteById(Long id);
+	Book  findByIsbn(@Param("isbn") String isbn);
 }

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.transaction.Transactional;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -104,14 +106,12 @@ public class BookServiceImpl implements BookService {
 		}
 		for (Author author : authorList) {
 			Author authorDB = authorRepository.findByName(author.getName());
-			
 			Author updateAuthor = new Author();
-			
 			if (authorDB == null) {
-				updateAuthor = authorRepository.save(author) ;
-				}else {
+				updateAuthor = authorRepository.save(author);
+			} else {
 				authorDB.setBirthday(author.getBirthday());
-				updateAuthor = authorRepository.save(authorDB) ;
+				updateAuthor = authorRepository.save(authorDB);
 			}
 			bookAuthorRepository.save(new BookAuthor(updatedBook, updateAuthor));
 
@@ -145,12 +145,15 @@ public class BookServiceImpl implements BookService {
 		return bookDTO;
 	}
 
+	@Transactional
 	@Override
 	public void deleteBook(String isbn) {
 		Book book = bookRepository.findByIsbn(isbn);
 		if (book == null) {
-			throw new NotFoundException("Book with ISBN " + book.getIsbn() + " not found!");
+			throw new NotFoundException("Book with ISBN " + isbn + " not found!");
 		}
+		bookAuthorRepository.deleteByBookId(book.getId());
+
 		bookRepository.delete(book);
 	}
 
