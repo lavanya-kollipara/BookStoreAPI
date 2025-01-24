@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "ddb50b7e-89db-4cf2-a91b-73a144f8a5fa",
+		"name": "bookstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23972794"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8093/bookstore/addBook",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "title",
+						"value": "title",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\":\"1\",\r\n    \"title\":\"titl151\",\r\n    \"authors\":[{\r\n        \"name\":\"auth1\",\r\n\"birthday\":\"20-10-2013\"\r\n    },{\r\n        \"name\":\"author11\",\r\n\"birthday\":\"20-10-2027\"\r\n    }],\r\n    \"year\": 29,\r\n    \"price\": 22,\r\n    \"genre\": \"1g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/bookstore/addBook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"bookstore",
+						"addBook"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8093/api/addBook",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isbn\":\"1\",\r\n    \"title\":\"title\",\r\n    \"authors\":{\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/BookStore/addBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"BookStore",
+								"addBook"
+							]
+						}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Allow",
+							"value": "POST"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jan 2025 05:15:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8093/bookstore/updateBook",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "title",
+						"value": "title",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\":\"1\",\r\n    \"title\":\"titl151\",\r\n    \"authors\":[{\r\n        \"name\":\"auth1\",\r\n\"birthday\":\"20-10-2013\"\r\n    },{\r\n        \"name\":\"author11\",\r\n\"birthday\":\"20-10-2027\"\r\n    }],\r\n    \"year\": 29,\r\n    \"price\": 22,\r\n    \"genre\": \"1g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/bookstore/updateBook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"bookstore",
+						"updateBook"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8093/api/addBook",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isbn\":\"1\",\r\n    \"title\":\"title\",\r\n    \"authors\":{\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/BookStore/addBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"BookStore",
+								"addBook"
+							]
+						}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Allow",
+							"value": "POST"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jan 2025 05:15:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8093/bookstore/delete/1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "title",
+						"value": "title",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\":\"1\",\r\n    \"title\":\"titl151\",\r\n    \"authors\":[{\r\n        \"name\":\"auth1\",\r\n\"birthday\":\"20-10-2013\"\r\n    },{\r\n        \"name\":\"author11\",\r\n\"birthday\":\"20-10-2027\"\r\n    }],\r\n    \"year\": 29,\r\n    \"price\": 22,\r\n    \"genre\": \"1g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/bookstore/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"bookstore",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8093/api/addBook",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isbn\":\"1\",\r\n    \"title\":\"title\",\r\n    \"authors\":{\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/BookStore/addBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"BookStore",
+								"addBook"
+							]
+						}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Allow",
+							"value": "POST"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jan 2025 05:15:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8093/bookstore/getBookByTitle/titl151",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "title",
+						"value": "title",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\":\"1\",\r\n    \"title\":\"titl151\",\r\n    \"authors\":[{\r\n        \"name\":\"auth1\",\r\n\"birthday\":\"20-10-2013\"\r\n    },{\r\n        \"name\":\"author11\",\r\n\"birthday\":\"20-10-2027\"\r\n    }],\r\n    \"year\": 29,\r\n    \"price\": 22,\r\n    \"genre\": \"1g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/bookstore/getBookByTitle/titl151",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"bookstore",
+						"getBookByTitle",
+						"titl151"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8093/api/addBook",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isbn\":\"1\",\r\n    \"title\":\"title\",\r\n    \"authors\":{\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/BookStore/addBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"BookStore",
+								"addBook"
+							]
+						}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Allow",
+							"value": "POST"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jan 2025 05:15:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8093/bookstore/getBookByAuthor/author3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "title",
+						"value": "title",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\":\"1\",\r\n    \"title\":\"titl151\",\r\n    \"authors\":[{\r\n        \"name\":\"auth1\",\r\n\"birthday\":\"20-10-2013\"\r\n    },{\r\n        \"name\":\"author11\",\r\n\"birthday\":\"20-10-2027\"\r\n    }],\r\n    \"year\": 29,\r\n    \"price\": 22,\r\n    \"genre\": \"1g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/bookstore/getBookByAuthor/author3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"bookstore",
+						"getBookByAuthor",
+						"author3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8093/api/addBook",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isbn\":\"1\",\r\n    \"title\":\"title\",\r\n    \"authors\":{\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/BookStore/addBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"BookStore",
+								"addBook"
+							]
+						}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Allow",
+							"value": "POST"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jan 2025 05:15:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
