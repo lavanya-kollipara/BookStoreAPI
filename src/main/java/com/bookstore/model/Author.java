@@ -22,7 +22,7 @@ public class Author {
 	private Long id;
 
 	@NotNull(message = "Author Name cannot be blank")
-	@Column(name = "name")
+	@Column(name = "name", unique=true)
 	private String name;
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")

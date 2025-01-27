@@ -7,16 +7,17 @@ import com.bookstore.model.Author;
 import com.bookstore.model.Book;
 
 public interface BookService {
-	
-	public List<BookDTO>  getBookByTitle(String title);
-	
+
+	public List<BookDTO> getBookByTitle(String title);
+
+	public List<BookDTO> getBookByTitleAndOrAuthor(String title, String author);
+
 	public List<BookDTO> getBookByAuthor(String author);
-	
-	public BookDTO updateBook(Book book,List<Author> authorList);
-	
+
+	public BookDTO updateBook(Book book, List<Author> authorList);
+
 	public BookDTO addNewBook(Book book, List<Author> authorList);
-	
+
 	public void deleteBook(String title);
-	public List<BookDTO> getAll();
 
 }
